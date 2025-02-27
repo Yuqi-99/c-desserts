@@ -1,5 +1,6 @@
 import { AddToCardButton } from 'src/components/AddToCardButton';
 import { formatAmount } from 'src/utils/formatAmount';
+import { motion } from 'framer-motion';
 
 type TCard = {
 	img: string;
@@ -13,9 +14,11 @@ export const Card = ({ img, category, name, price }: TCard) => {
 		<div className='mt-2 flex flex-col sm:w-[48%] lg:w-[32%]'>
 			<div className='relative flex h-fit w-fit flex-col items-center'>
 				<img src={img} alt={name} className='w-full rounded-lg' />
-				<div className='absolute -bottom-6'>
+				<motion.div className='absolute -bottom-6' whileHover={{ scale: 1.1 }}>
+					{/* <div className='absolute -bottom-6'> */}
 					<AddToCardButton name={name} price={price} />
-				</div>
+					{/* </div> */}
+				</motion.div>
 			</div>
 			<div className='mt-10'>
 				<p className='text-xs text-categoryText'>{category}</p>

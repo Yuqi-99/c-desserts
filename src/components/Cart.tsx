@@ -11,7 +11,7 @@ export const Cart = () => {
 	const orderTotal = cart?.reduce((total, item) => total + item.total, 0);
 	return (
 		<>
-			<div className='flex flex-col items-center rounded-lg bg-white p-4'>
+			<div className='mt-4 flex flex-col items-center rounded-lg bg-white p-4 md:mt-0'>
 				<p className='mb-4 w-full text-left text-lg font-bold text-cartTitle'>Your Cart</p>
 				{cart?.length === 0 ? (
 					<>

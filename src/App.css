@@ -21,6 +21,12 @@
 	color: #934c2c;
 }
 
+#startButton:hover {
+	border-color: white;
+	background-color: white;
+	color: #c83b0d;
+}
+
 #cartButtonMinus:hover {
 	border-color: white;
 	background-color: white;

@@ -1,29 +1,34 @@
-import { Card } from 'src/components/Card';
-import { Cart } from 'src/components/Cart';
-import DessertData from 'src/data/data.json';
+import { useNavigate } from 'react-router-dom';
+import LogoIcon from 'src/assets/images/illustration-empty-cart.svg?react';
+import { motion } from 'framer-motion';
 
 export const Home = () => {
-	const width = window.innerWidth;
+	const navigate = useNavigate();
 	return (
-		<div className='flex h-full w-full flex-col justify-between gap-4 md:flex-row'>
-			<div className='md:w-2/3'>
-				<p className='mb-8 text-3xl font-bold text-black'>Desserts</p>
-				<div className='flex flex-wrap justify-between gap-2'>
-					{DessertData.map((item) => {
-						return (
-							<Card
-								img={width < 641 ? item.image.mobile : item.image.desktop}
-								category={item.category}
-								name={item.name}
-								price={item.price}
-							/>
-						);
-					})}
-				</div>
-			</div>
-			<div className='md:w-1/3'>
-				<Cart />
-			</div>
+		<div className='flex h-full w-full flex-col items-center justify-center'>
+			<motion.div
+				animate={{ y: [0, 50, 0] }}
+				transition={{
+					repeat: Infinity,
+				}}
+			>
+				<LogoIcon className='size-64' />
+			</motion.div>
+
+			<motion.div
+				className='mt-8 flex w-full cursor-pointer items-center justify-center'
+				whileHover={{ scale: 1.2 }}
+				whileTap={{ scale: 0.9, transition: { duration: 4 } }}
+			>
+				<button
+					type='button'
+					className='mt-4 w-1/2 rounded-full bg-addToCartBorder px-5 py-4 text-white md:w-1/4'
+					onClick={() => navigate('/category')}
+					id='startButton'
+				>
+					Start
+				</button>
+			</motion.div>
 		</div>
 	);
 };
