@@ -8,13 +8,14 @@ import './App.css';
 import { RootLayout } from './layouts/RootLayout';
 import { Home } from './modules/Home';
 import { Category } from 'src/modules/Category';
+import { NotFoundPage } from 'src/modules/NotFoundPage';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route errorElement={<div>404</div>}>
+		<Route errorElement={<NotFoundPage />}>
 			<Route path='/' element={<RootLayout />}>
 				<Route path='/' element={<Home />} />
-				<Route path='/category' element={<Category />} />
+				<Route path='/category/' element={<Category />} />
 			</Route>
 		</Route>
 	),

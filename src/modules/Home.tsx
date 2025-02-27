@@ -23,7 +23,7 @@ export const Home = () => {
 				<button
 					type='button'
 					className='mt-4 w-1/2 rounded-full bg-addToCartBorder px-5 py-4 text-white md:w-1/4'
-					onClick={() => navigate('/category')}
+					onClick={() => navigate('/category/')}
 					id='startButton'
 				>
 					Start

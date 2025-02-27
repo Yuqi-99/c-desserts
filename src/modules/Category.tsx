@@ -12,6 +12,7 @@ export const Category = () => {
 					{DessertData.map((item) => {
 						return (
 							<Card
+								key={item.name}
 								img={width < 641 ? item.image.mobile : item.image.desktop}
 								category={item.category}
 								name={item.name}
