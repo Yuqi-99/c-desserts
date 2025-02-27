@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.polyfill-min-h-screen {
+	min-height: 100vh;
+	min-height: calc(var(--1dvh, 1vh) * 100);
+	min-height: 100dvh;
+}
+
+.polyfill-h-screen {
+	height: 100vh; /* For browsers that don't support CSS variables */
+	height: calc(var(--1dvh, 1vh) * 100); /* This is the "polyfill" */
+	height: 100dvh; /* This is for future browsers that support svh, dvh and lvh viewport units */
+}
+
+#cartButton:hover {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #934c2c;
+	color: #934c2c;
+}
+
+#cartButtonMinus:hover {
+	border-color: white;
+	background-color: white;
+	color: #c83b0d;
+}
+
+#cartButtonPlus:hover {
+	border-color: white;
+	background-color: white;
+	color: #c83b0d;
+}
+
+#deleteButton:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #574e49;
+	color: #574e49;
+}
+
+/* @media (min-width: 1025px) {
+	.polyfill-max-w-half-h-screen {
+		max-width: 50vh;
+		max-width: calc(var(--1dvh, 1vh) * 50);
+		max-width: 50dvh;
+		min-width: 450px;
+	}
+} */
