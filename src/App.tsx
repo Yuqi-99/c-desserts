@@ -15,7 +15,7 @@ const router = createBrowserRouter(
 		<Route errorElement={<NotFoundPage />}>
 			<Route path='/' element={<RootLayout />}>
 				<Route path='/' element={<Home />} />
-				<Route path='/category/' element={<Category />} />
+				<Route path='/category' element={<Category />} />
 			</Route>
 		</Route>
 	),
