@@ -46,6 +46,46 @@
 	color: #574e49;
 }
 
+@media (min-width: 390px) {
+	.blurred-img {
+		min-height: 420px;
+		min-width: 400px;
+	}
+}
+
+@media (min-width: 641px) {
+	.blurred-img {
+		min-height: 280px;
+		min-width: 270px;
+	}
+}
+
+@media (min-width: 768px) {
+	.blurred-img {
+		min-height: 197px;
+		min-width: 188px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.blurred-img {
+		min-height: 220px;
+		min-width: 210px;
+	}
+}
+
+.blurred-img img {
+	opacity: 0;
+	transition: opacity 250ms ease-in-out;
+	background-color: #fdf8f6;
+}
+
+.blurred-img.loaded img {
+	opacity: 1;
+	height: auto;
+	width: auto;
+}
+
 /* @media (min-width: 1025px) {
 	.polyfill-max-w-half-h-screen {
 		max-width: 50vh;

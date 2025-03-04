@@ -1,19 +1,20 @@
 import { Card } from 'src/components/Card';
 import { Cart } from 'src/components/Cart';
 import DessertData from 'src/data/data.json';
+// import LogoIcon from 'src/assets/images/illustration-empty-cart.svg?react';
+// import { motion } from 'framer-motion';
 
 export const Category = () => {
-	const width = window.innerWidth;
 	return (
 		<div className='flex h-full w-full flex-col justify-between gap-4 md:flex-row'>
-			<div className='md:w-2/3'>
+			<div className='w-full md:w-2/3'>
 				<p className='mb-8 text-3xl font-bold text-black'>Desserts</p>
-				<div className='flex flex-wrap justify-between gap-2'>
+				<div className='flex flex-wrap items-center justify-center gap-2 sm:justify-between'>
 					{DessertData.map((item) => {
 						return (
 							<Card
 								key={item.name}
-								img={width < 641 ? item.image.mobile : item.image.desktop}
+								img={item.image.tablet}
 								category={item.category}
 								name={item.name}
 								price={item.price}
